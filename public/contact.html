@@ -107,61 +107,58 @@
     <hr class="solid">
 
     <section class="section" id="contact">
-        <div class="field">
-            <label class="label">Nom</label>
-            <div class="control">
-                <input class="input is-black" type="text" placeholder="Nom de famille">
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Prénom</label>
-            <div class="control">
-                <input class="input is-black" type="text" placeholder="Prénom">
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Adresse mail</label>
-            <div class="control has-icons-left has-icons-right">
-                <input class="input is-danger" type="email" placeholder="Adresse mail">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                </span>
-            </div>
-            <p class="help is-danger">Cette adresse mail est invalide</p>
-        </div>
-
-        <div class="field">
-            <label class="label">Objet</label>
-            <div class="control">
-                <div class="select">
-                    <select>
-                        <option>Autre</option>
-                        <option>Demande professionnelle</option>
-                    </select>
+        <form action="mail.php" method="POST">
+            <div class="field">
+                <label class="label">Nom <span style="color: red;">*</span></label>
+                <div class="control">
+                    <input name="lastname" class="input is-black" type="text" placeholder="Nom de famille" required>
                 </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Message</label>
-            <div class="control">
-                <textarea class="textarea is-black" placeholder="Entrez votre message..."></textarea>
+            <div class="field">
+                <label class="label">Prénom <span style="color: red;">*</span></label>
+                <div class="control">
+                    <input name="firstname" class="input is-black" type="text" placeholder="Prénom" required>
+                </div>
             </div>
-        </div>
 
-        <div class="field is-grouped">
-            <div class="control">
-                <button class="button is-danger">Envoyer</button>
+            <div class="field">
+                <label class="label">Adresse mail <span style="color: red;">*</span></label>
+                <div class="control">
+                    <input name="mail" class="input is-black" type="email" placeholder="e.g. yourname@example.com" required>
+                </div>
             </div>
-            <div class="control">
-                <button class="button is-danger is-light" onclick="location.href='index.html'">Annuler</button>
+
+            <div class="field">
+                <label class="label">Objet</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="object">
+                            <option>Autre</option>
+                            <option>Demande professionnelle</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="field">
+                <label class="label">Message <span style="color: red;">*</span></label>
+                <div class="control">
+                    <textarea name="message" class="textarea is-black" placeholder="Entrez votre message..." required></textarea>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button type="submit" class="button is-danger">Envoyer</button>
+                </div>
+                <div class="control">
+                    <button class="button is-danger is-light" onclick="location.href='index.html'">Annuler</button>
+                </div>
+            </div>
+
+            <p><span style="color: red;">*</span> champs obligatoires</p>
+        </form>
     </section>
 
     <hr class="solid">
