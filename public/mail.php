@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once "../vendor/autoload.php";
 
 use \Mailjet\Resources;
 
@@ -16,13 +16,13 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['mai
     $object = htmlspecialchars($_POST['object']);
     $message = htmlspecialchars($_POST['message']);
 
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
         $body = [
             'Messages' => [
                 [
                     'From' => [
-                        'Email' => "cyril.manil08@gmail.com",
-                        'Name' => "Cyril Manil"
+                        'Email' => "$mail",
+                        'Name' => "$firstname" . " $lastname"
                     ],
                     'To' => [
                         [
@@ -31,7 +31,7 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['mai
                         ]
                     ],
                     'Subject' => "$object",
-                    'TextPart' => "$mail, $message",
+                    'TextPart' => "$message",
                 ]
             ]
         ];
