@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CYRIL MANIL</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                CYRIL MANIL
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="index.html#profile">
+                    A propos de moi
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Explorer
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="index.html#real">
+                            Réalisations
+                        </a>
+                        <a class="navbar-item" href="index.html#studies">
+                            Formation
+                        </a>
+                        <a class="navbar-item" href="index.html#exp">
+                            Expériences professionnelles
+                        </a>
+                    </div>
+                </div>
+
+                <a class="navbar-item" href="contact.html">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="level is-mobile p-3 has-background-dark has-text-white-ter">
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Projets</p>
+                <p class="subtitle has-text-white-ter">3</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Statut</p>
+                <p class="subtitle has-text-white-ter">Etudiant</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Qualités</p>
+                <p class="subtitle has-text-white-ter">Créatif, rigoureux et autonome</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Objectif</p>
+                <p class="subtitle has-text-white-ter">Développeur full-stack</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="profile">
+        <div class="notification is-danger has-text-centered">
+            <h1 class="title">
+                <span class="icon pr-5">
+                    <i class="fas fa-phone"></i>
+                </span>
+                Contactez-moi
+            </h1>
+        </div>
+    </div>
+
+    <section class="section has-text-centered">
+        <h2 class="subtitle">Contactez-moi par <strong>téléphone</strong> : 07 82 48 50 67</h2>
+        <br>
+        <h1 class="title">ou</h1>
+        <br>
+        <h2 class="subtitle has-text-centered">Contactez-moi en remplissant le <strong>formulaire</strong> ci dessous.
+        </h2>
+    </section>
+
+    <hr class="solid">
+
+    <section class="section" id="contact">
+        <div class="field">
+            <label class="label">Nom</label>
+            <div class="control">
+                <input class="input is-black" type="text" placeholder="Nom de famille">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Prénom</label>
+            <div class="control">
+                <input class="input is-black" type="text" placeholder="Prénom">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Adresse mail</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="email" placeholder="Adresse mail">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </span>
+            </div>
+            <p class="help is-danger">Cette adresse mail est invalide</p>
+        </div>
+
+        <div class="field">
+            <label class="label">Objet</label>
+            <div class="control">
+                <div class="select">
+                    <select>
+                        <option>Autre</option>
+                        <option>Demande professionnelle</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+                <textarea class="textarea is-black" placeholder="Entrez votre message..."></textarea>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-danger">Envoyer</button>
+            </div>
+            <div class="control">
+                <button class="button is-danger is-light" onclick="location.href='index.html'">Annuler</button>
+            </div>
+        </div>
+    </section>
+
+    <hr class="solid">
+
+    <section class="section has-text-centered">
+        <h2 class="subtitle">Retrouvez-moi sur les <strong>réseaux sociaux</strong> :</h2>
+
+        <h2 class="subtitle">
+            <span class="icon">
+                <i class="fab fa-linkedin"></i>
+            </span>
+            <a href="https://www.linkedin.com/in/cyril-manil-a40a1924b/">LinkedIn</a>
+        </h2>
+
+        <h2 class="subtitle">
+            <span class="icon">
+                <i class="fab fa-github"></i>
+            </span>
+            <a href="https://github.com/cyrilmnl">GitHub</a>
+        </h2>
+    </section>
+
+    <footer class="footer has-background-dark has-text-white-ter">
+        <div class="content has-text-centered">
+            <p>
+                Bulma by <a href="index.html">Cyril Manil</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        /* Menu burger */
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
+</body>
+
+
+
+</html>
