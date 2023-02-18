@@ -145,12 +145,12 @@ $pageweb->appendContent(
             </div>
         </div>
 
-        <div class="content mt-6">
+        <div class="content">
             <h1 class="title">Compétences</h1>
 
             <hr class="solid">
 
-            <div class="columns pt-3">
+            <div class="columns">
                 <div class="column is-half">
                     <h2>Générales</h2>
 
@@ -199,7 +199,7 @@ $pageweb->appendContent(
 
             <hr class="solid">
 
-            <div class="columns pt-3">
+            <div class="columns">
                 <div class="column is-half">
                     <h2>Sport</h2>
 
@@ -274,51 +274,6 @@ $pageweb->appendContent(
     <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
         <div class="card-image">
             <figure class="image is-16by10" id="img1">
-                <img src="img/img1.png" alt="Placeholder image">
-            </figure>
-            <div class="middle">
-                <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl'">
-                    <span class="icon">
-                        <i class="fab fa-github"></i>
-                    </span>
-                    <span>GitHub</span>
-                </button>
-            </div>
-        </div>
-        <div class="card-content pt-6">
-            <div class="media">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img src="img/profile.jpg" alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="media-content">
-                    <p class="title is-4">Cyril Manil</p>
-                </div>
-            </div>
-
-            <div class="content">
-                Portfolio réalisé dans le but de présenter mes compétences, mes expériences ainsi que ma formation. Un
-                système d'envoi de mail avec un formulaire de contact est disponible.
-                <br><br>
-                Réalisé avec :
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS et Bulma</li>
-                    <li>JS</li>
-                    <li>PHP</li>
-                </ul>
-                Publié à
-                <time datetime="2023-2-5">12:09 - 18 février 2023</time>
-            </div>
-        </div>
-    </div>
-
-    <hr class="solid">
-
-    <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
-        <div class="card-image">
-            <figure class="image is-16by10" id="img1">
                 <img src="img/img2.png" alt="Placeholder image">
             </figure>
             <div class="middle">
@@ -339,7 +294,7 @@ $pageweb->appendContent(
                 </div>
                 <div class="media-content">
                     <p class="title is-4">Cyril Manil</p>
-                    <p class="subtitle is-6">En collaboration avec Mathéo Olsen, Alexis Hermant et Théo Simonet.</p>
+                    <p class="subtitle is-6">En collaboration avec 3 autres étudiants.</p>
                 </div>
             </div>
 
@@ -360,8 +315,6 @@ $pageweb->appendContent(
             </div>
         </div>
     </div>
-
-    <hr class="solid">
 
     <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
         <div class="card-image">
@@ -386,7 +339,7 @@ $pageweb->appendContent(
                 </div>
                 <div class="media-content">
                     <p class="title is-4">Cyril Manil</p>
-                    <p class="subtitle is-6">En collaboration avec Mathéo Olsen.</p>
+                    <p class="subtitle is-6">En collaboration avec un autre étudiant.</p>
                 </div>
             </div>
 
@@ -402,6 +355,50 @@ $pageweb->appendContent(
                 </ul>
                 Publié à
                 <time datetime="2023-2-5">11:23 - 5 février 2023</time>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
+        <div class="card-image">
+            <figure class="image is-16by10" id="img1">
+                <img src="img/img1.png" alt="Placeholder image">
+            </figure>
+            <div class="middle">
+                <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl'">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                </button>
+            </div>
+        </div>
+        <div class="card-content pt-6">
+            <div class="media">
+                <div class="media-left">
+                    <figure class="image is-48x48">
+                        <img src="img/profile.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <p class="title is-4">Cyril Manil</p>
+                    <p class="subtitle is-6">Projet personnel.</p>
+                </div>
+            </div>
+
+            <div class="content">
+                Portfolio réalisé dans le but de présenter mes compétences, mes expériences ainsi que ma formation. Un
+                système d'envoi de mail avec un formulaire de contact est disponible.
+                <br><br>
+                Réalisé avec :
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS et Bulma</li>
+                    <li>JS</li>
+                    <li>PHP</li>
+                </ul>
+                Publié à
+                <time datetime="2023-2-5">12:09 - 18 février 2023</time>
             </div>
         </div>
     </div>
@@ -425,44 +422,46 @@ $pageweb->appendContent(
     </div>
 
     <section class="section">
-        <h1 class="title">
-            <span class="icon mr-3">
-                <i class="fas fa-graduation-cap"></i>
-            </span>
-            Lycée
-        </h1>
-        <em>Lycée Pierre Bayle - Sedan</em>
-        <br><br>
-        <h2 class="subtitle">
-            Baccalauréat général spécialités <strong>mathématiques</strong> et <strong>numérique et sciences
-                informatiques</strong>.
-            <br>
-            Obtenu avec mention en 2021.
-        </h2>
-
-        <button class="js-modal-trigger button is-danger is-outlined" data-target="modal-js-1">
-            En savoir plus
-        </button>
-    </section>
-
-    <section class="section has-text-right">
-        <h1 class="title">
-            <span class="icon pr-5">
-                <i class="fas fa-graduation-cap"></i>
-            </span>
-            Etudes supérieures
-        </h1>
-        <em>IUT RCC - Reims</em>
-        <br><br>
-        <h2 class="subtitle">
-            Bachelor universitaire de technologie - <strong>Informatique</strong>.
-            <br>
-            En cours d'obtention.
-        </h2>
-
-        <button class="js-modal-trigger button is-danger is-outlined" data-target="modal-js-2">
-            En savoir plus
-        </button>
+        <div class="has-text-left">
+            <h1 class="title ml-4">
+                <span class="icon pr-4">
+                    <i class="fas fa-graduation-cap"></i>
+                </span>
+                Lycée
+            </h1>
+            <em>Lycée Pierre Bayle - Sedan</em>
+            <br><br>
+            <h2 class="subtitle">
+                Baccalauréat général spécialités <strong>mathématiques</strong> et <strong>numérique et sciences
+                    informatiques</strong>.
+                <br>
+                Obtenu avec mention en 2021.
+            </h2>
+    
+            <button class="js-modal-trigger button is-danger is-outlined" data-target="modal-js-1">
+                En savoir plus
+            </button>
+        </div>
+        
+        <div class="has-text-right">
+            <h1 class="title">
+                <span class="icon pr-4">
+                    <i class="fas fa-graduation-cap"></i>
+                </span>
+                Etudes supérieures
+            </h1>
+            <em>IUT RCC - Reims</em>
+            <br><br>
+            <h2 class="subtitle">
+                Bachelor universitaire de technologie - <strong>Informatique</strong>.
+                <br>
+                En cours d'obtention.
+            </h2>
+    
+            <button class="js-modal-trigger button is-danger is-outlined" data-target="modal-js-2">
+                En savoir plus
+            </button>
+        </div>
     </section>
 HTML
 );
