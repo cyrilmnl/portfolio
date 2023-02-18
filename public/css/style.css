@@ -138,3 +138,9 @@ hr.solid {
     padding-left: 25%;
     padding-right: 25%;
 }
+
+/* Footer */
+
+.footer a:hover {
+    color: hsl(348, 100%, 61%);
+}
