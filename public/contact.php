@@ -90,8 +90,8 @@ $pageweb->appendContent(
         </div>
         <div class="level-item has-text-centered">
             <div>
-                <p class="heading">Qualités</p>
-                <p class="subtitle has-text-white-ter">Créatif, rigoureux et autonome</p>
+                <p class="heading">Qualité</p>
+                <p class="subtitle has-text-white-ter">Créatif</p>
             </div>
         </div>
         <div class="level-item has-text-centered">
