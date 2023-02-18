@@ -111,7 +111,7 @@ $pageweb->appendContent(
     <<<HTML
     <div class="container" id="profile">
         <div class="notification is-danger has-text-centered">
-            <h1 class="title">
+            <h1 class="title" id="text_ani">
                 <span class="icon pr-5">
                     <i class="fas fa-user"></i>
                 </span>
@@ -262,7 +262,7 @@ $pageweb->appendContent(
     <<<HTML
     <div class="container" id="real">
         <div class="notification is-danger has-text-centered">
-            <h1 class="title">
+            <h1 class="title" id="text_ani">
                 <span class="icon pr-5">
                     <i class="fas fa-keyboard"></i>
                 </span>
@@ -412,7 +412,7 @@ $pageweb->appendContent(
     <<<HTML
     <div class="container" id="studies">
         <div class="notification is-danger has-text-centered">
-            <h1 class="title">
+            <h1 class="title" id="text_ani">
                 <span class="icon pr-5">
                     <i class="fas fa-book"></i>
                 </span>
@@ -473,7 +473,7 @@ $pageweb->appendContent(
     <<<HTML
     <div class="container" id="exp">
         <div class="notification is-danger has-text-centered">
-            <h1 class="title">
+            <h1 class="title" id="text_ani">
                 <span class="icon pr-5">
                     <i class="fas fa-building"></i>
                 </span>

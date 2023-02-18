@@ -111,7 +111,7 @@ $pageweb->appendContent(
     <<<HTML
     <div class="container" id="profile">
         <div class="notification is-danger has-text-centered">
-            <h1 class="title">
+            <h1 class="title" id="text_ani">
                 <span class="icon pr-5">
                     <i class="fas fa-phone"></i>
                 </span>
