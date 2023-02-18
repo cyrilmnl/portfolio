@@ -1,19 +1,31 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CYRIL MANIL</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
+declare(strict_types=1);
 
-<body>
+use Entity\Collection\GenreCollection;
+use Entity\Collection\TvshowCollection;
+use Html\WebPage;
+
+require_once '../src/Html/WebPage.php';
+
+$pageweb = new WebPage();
+
+$pageweb->setTitle("Portfolio");
+
+$pageweb->appendCssUrl("css/style.css");
+
+$pageweb->appendCssUrl("//use.fontawesome.com/releases/v5.0.7/css/all.css");
+
+$pageweb->appendCssUrl("https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css");
+
+/*
+ * Première navbar
+ */
+$pageweb->appendContent(
+    <<<HTML
     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
+            <a class="navbar-item" href="index.php">
                 CYRIL MANIL
             </a>
 
@@ -27,7 +39,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-                <a class="navbar-item" href="index.html#profile">
+                <a class="navbar-item" href="index.php#profile">
                     A propos de moi
                 </a>
 
@@ -37,25 +49,32 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="index.html#real">
+                        <a class="navbar-item" href="index.php#real">
                             Réalisations
                         </a>
-                        <a class="navbar-item" href="index.html#studies">
+                        <a class="navbar-item" href="index.php#studies">
                             Formation
                         </a>
-                        <a class="navbar-item" href="index.html#exp">
+                        <a class="navbar-item" href="index.php#exp">
                             Expériences professionnelles
                         </a>
                     </div>
                 </div>
 
-                <a class="navbar-item" href="contact.html">
+                <a class="navbar-item" href="contact.php">
                     Contact
                 </a>
             </div>
         </div>
     </nav>
+HTML
+);
 
+/*
+ * Deuxième navbar
+ */
+$pageweb->appendContent(
+    <<<HTML
     <nav class="level is-mobile p-3 has-background-dark has-text-white-ter">
         <div class="level-item has-text-centered">
             <div>
@@ -82,7 +101,14 @@
             </div>
         </div>
     </nav>
+HTML
+);
 
+/*
+ * Indications de contact
+ */
+$pageweb->appendContent(
+    <<<HTML
     <div class="container" id="profile">
         <div class="notification is-danger has-text-centered">
             <h1 class="title">
@@ -99,13 +125,19 @@
         <br>
         <h1 class="title">ou</h1>
         <br>
-        <h2 class="subtitle has-text-centered">Contactez-moi en remplissant le <strong>formulaire</strong> ci dessous
-            (pas encore fonctionnel).
+        <h2 class="subtitle has-text-centered">Contactez-moi en remplissant le <strong>formulaire</strong> ci dessous.
         </h2>
     </section>
 
     <hr class="solid">
+HTML
+);
 
+/*
+ * Formulaire de contact
+ */
+$pageweb->appendContent(
+    <<<HTML
     <section class="section" id="contact">
         <form action="mail.php" method="POST">
             <div class="field">
@@ -159,7 +191,14 @@
     </section>
 
     <hr class="solid">
+HTML
+);
 
+/*
+ * Informations personnelles et footer
+ */
+$pageweb->appendContent(
+    <<<HTML
     <section class="section has-text-centered">
         <h2 class="subtitle">Retrouvez-moi sur les <strong>réseaux sociaux</strong> :</h2>
 
@@ -181,40 +220,15 @@
     <footer class="footer has-background-dark has-text-white-ter">
         <div class="content has-text-centered">
             <p>
-                Bulma by <a href="index.html">Cyril Manil</a>. The source code is licensed
+                Bulma by <a href="index.php">Cyril Manil</a>. The source code is licensed
                 <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
                 is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
             </p>
         </div>
     </footer>
+HTML
+);
 
-    <script>
-        /* Menu burger */
+$pageweb->appendJsUrl("js/burger.js");
 
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // Get all "navbar-burger" elements
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-            // Add a click event on each of them
-            $navbarBurgers.forEach(el => {
-                el.addEventListener('click', () => {
-
-                    // Get the target from the "data-target" attribute
-                    const target = el.dataset.target;
-                    const $target = document.getElementById(target);
-
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-
-                });
-            });
-
-        });
-    </script>
-</body>
-
-
-
-</html>
+echo $pageweb->toHTML();

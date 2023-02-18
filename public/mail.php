@@ -21,8 +21,8 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['mai
             'Messages' => [
                 [
                     'From' => [
-                        'Email' => "$mail",
-                        'Name' => "$firstname" . " $lastname"
+                        'Email' => "cyril.manil08@gmail.com",
+                        'Name' => "Cyril Manil"
                     ],
                     'To' => [
                         [
@@ -31,17 +31,17 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['mai
                         ]
                     ],
                     'Subject' => "$object",
-                    'TextPart' => "$message",
+                    'TextPart' => "Mail reçu par : $firstname $lastname\n$mail\n\n$message",
                 ]
             ]
         ];
         $response = $mj->post(Resources::$Email, ['body' => $body]);
         $response->success();
-        echo "Email envoyé avec succès !";
+        header("Location: response.php?value=true");
     } else {
-        echo "Email non valide";
+        header("Location: response.php?value=false");
     }
 } else {
-    header('Location: index.html');
+    header('Location: index.php');
     die();
 }

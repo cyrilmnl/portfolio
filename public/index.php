@@ -1,19 +1,31 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CYRIL MANIL</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
+declare(strict_types=1);
 
-<body>
+use Entity\Collection\GenreCollection;
+use Entity\Collection\TvshowCollection;
+use Html\WebPage;
+
+require_once '../src/Html/WebPage.php';
+
+$pageweb = new WebPage();
+
+$pageweb->setTitle("Portfolio");
+
+$pageweb->appendCssUrl("css/style.css");
+
+$pageweb->appendCssUrl("//use.fontawesome.com/releases/v5.0.7/css/all.css");
+
+$pageweb->appendCssUrl("https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css");
+
+/*
+ * Première navbar
+ */
+$pageweb->appendContent(
+    <<<HTML
     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
+            <a class="navbar-item" href="index.php">
                 CYRIL MANIL
             </a>
 
@@ -27,7 +39,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-                <a class="navbar-item" href="index.html#profile">
+                <a class="navbar-item" href="index.php#profile">
                     A propos de moi
                 </a>
 
@@ -37,25 +49,32 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="index.html#real">
+                        <a class="navbar-item" href="index.php#real">
                             Réalisations
                         </a>
-                        <a class="navbar-item" href="index.html#studies">
+                        <a class="navbar-item" href="index.php#studies">
                             Formation
                         </a>
-                        <a class="navbar-item" href="index.html#exp">
+                        <a class="navbar-item" href="index.php#exp">
                             Expériences professionnelles
                         </a>
                     </div>
                 </div>
 
-                <a class="navbar-item" href="contact.html">
+                <a class="navbar-item" href="contact.php">
                     Contact
                 </a>
             </div>
         </div>
     </nav>
+HTML
+);
 
+/*
+ * Deuxième navbar
+ */
+$pageweb->appendContent(
+    <<<HTML
     <nav class="level is-mobile p-3 has-background-dark has-text-white-ter">
         <div class="level-item has-text-centered">
             <div>
@@ -82,7 +101,14 @@
             </div>
         </div>
     </nav>
+HTML
+);
 
+/*
+ * Profil
+ */
+$pageweb->appendContent(
+    <<<HTML
     <div class="container" id="profile">
         <div class="notification is-danger has-text-centered">
             <h1 class="title">
@@ -113,7 +139,7 @@
                 <h2 class="subtitle">
                     <strong>Localisation :</strong> Reims - Charleville-Mézières - Sedan
                 </h2>
-                <button class="button is-danger is-outlined" onclick="location.href='contact.html'">
+                <button class="button is-danger is-outlined" onclick="location.href='contact.php'">
                     <span>Me contacter</span>
                 </button>
             </div>
@@ -223,7 +249,14 @@
             </div>
         </div>
     </section>
+HTML
+);
 
+/*
+ * Réalisations
+ */
+$pageweb->appendContent(
+    <<<HTML
     <div class="container" id="real">
         <div class="notification is-danger has-text-centered">
             <h1 class="title">
@@ -369,7 +402,14 @@
             </div>
         </div>
     </div>
+HTML
+);
 
+/*
+ * Formation
+ */
+$pageweb->appendContent(
+    <<<HTML
     <div class="container" id="studies">
         <div class="notification is-danger has-text-centered">
             <h1 class="title">
@@ -421,7 +461,14 @@
             En savoir plus
         </button>
     </section>
+HTML
+);
 
+/*
+ * Expériences professionnelles
+ */
+$pageweb->appendContent(
+    <<<HTML
     <div class="container" id="exp">
         <div class="notification is-danger has-text-centered">
             <h1 class="title">
@@ -474,7 +521,14 @@
             </div>
         </div>
     </div>
+HTML
+);
 
+/*
+ * Modal
+ */
+$pageweb->appendContent(
+    <<<HTML
     <div id="modal-js-1" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -552,7 +606,14 @@
             </footer>
         </div>
     </div>
+HTML
+);
 
+/*
+ * Bouton top et footer
+ */
+$pageweb->appendContent(
+    <<<HTML
     <div id="scroll_to_top">
         <span class="tag is-danger is-large">
             <span class="icon">
@@ -566,91 +627,19 @@
     <footer class="footer has-background-dark has-text-white-ter mt-6">
         <div class="content has-text-centered">
             <p>
-                Bulma by <a href="index.html">Cyril Manil</a>. The source code is licensed
+                Bulma by <a href="index.php">Cyril Manil</a>. The source code is licensed
                 <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
                 is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
             </p>
         </div>
     </footer>
+HTML
+);
 
-    <script>
-        /* Menu burger */
+$pageweb->appendJsUrl("js/burger.js");
 
-        document.addEventListener('DOMContentLoaded', () => {
+$pageweb->appendJsUrl("js/modal.js");
 
-            // Get all "navbar-burger" elements
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+$pageweb->appendJsUrl("js/top.js");
 
-            // Add a click event on each of them
-            $navbarBurgers.forEach(el => {
-                el.addEventListener('click', () => {
-
-                    // Get the target from the "data-target" attribute
-                    const target = el.dataset.target;
-                    const $target = document.getElementById(target);
-
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-
-                });
-            });
-
-        });
-
-        /* Modal */
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Functions to open and close a modal
-            function openModal($el) {
-                $el.classList.add('is-active');
-            }
-
-            function closeModal($el) {
-                $el.classList.remove('is-active');
-            }
-
-            function closeAllModals() {
-                (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-                    closeModal($modal);
-                });
-            }
-
-            // Add a click event on buttons to open a specific modal
-            (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-                const modal = $trigger.dataset.target;
-                const $target = document.getElementById(modal);
-
-                $trigger.addEventListener('click', () => {
-                    openModal($target);
-                });
-            });
-
-            // Add a click event on various child elements to close the parent modal
-            (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-                const $target = $close.closest('.modal');
-
-                $close.addEventListener('click', () => {
-                    closeModal($target);
-                });
-            });
-
-            // Add a keyboard event to close all modals
-            document.addEventListener('keydown', (event) => {
-                const e = event || window.event;
-
-                if (e.keyCode === 27) { // Escape key
-                    closeAllModals();
-                }
-            });
-        });
-
-        /* Retour en haut de page */
-
-        document.getElementById("delete").onclick = function () {
-            document.getElementById("scroll_to_top").remove();
-        }
-    </script>
-</body>
-
-</html>
+echo $pageweb->toHTML();
