@@ -16,7 +16,7 @@ $pageweb->appendCssUrl("css/style.css");
 
 $pageweb->appendCssUrl("https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css");
 
-if ($_GET["value"]) {
+if ($_GET["value"] == "true") {
     $pageweb->appendContent(
         <<<HTML
         <p>Email envoyé avec <strong>succès</strong> ! Vous serez redirigé dans 3 secondes...</p>
