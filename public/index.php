@@ -617,10 +617,8 @@ $pageweb->appendContent(
     <div id="scroll_to_top">
         <span class="tag is-danger is-large">
             <span class="icon">
-                <a class="mr-1" href="#top"><i class="fas fa-arrow-up"></i></a>
+                <a href="#top"><i class="fas fa-arrow-up"></i></a>
             </span>
-
-            <button class="delete" id="delete"></button>
         </span>
     </div>
 
