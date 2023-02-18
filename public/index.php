@@ -295,18 +295,18 @@ $pageweb->appendContent(
             </div>
 
             <div class="content">
-                Portfolio réalisé dans le but de présenter mes compétences, mes expériences ainsi que ma formation.
+                Portfolio réalisé dans le but de présenter mes compétences, mes expériences ainsi que ma formation. Un
+                système d'envoi de mail avec un formulaire de contact est disponible.
                 <br><br>
                 Réalisé avec :
                 <ul>
                     <li>HTML</li>
                     <li>CSS et Bulma</li>
                     <li>JS</li>
-                    <li>PHP et Symfony</li>
-                    <li>SQL</li>
+                    <li>PHP</li>
                 </ul>
                 Publié à
-                <time datetime="2023-2-5">10:28 - 5 février 2023</time>
+                <time datetime="2023-2-5">12:09 - 18 février 2023</time>
             </div>
         </div>
     </div>
