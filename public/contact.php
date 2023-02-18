@@ -122,14 +122,8 @@ $pageweb->appendContent(
 
     <section class="section has-text-centered">
         <h2 class="subtitle">Contactez-moi par <strong>téléphone</strong> : 07 82 48 50 67</h2>
-        <br>
-        <h1 class="title">ou</h1>
-        <br>
-        <h2 class="subtitle has-text-centered">Contactez-moi en remplissant le <strong>formulaire</strong> ci dessous.
-        </h2>
+        <h2 class="subtitle">ou en remplissant le <strong>formulaire</strong> ci dessous.</h2>
     </section>
-
-    <hr class="solid">
 HTML
 );
 
@@ -189,8 +183,6 @@ $pageweb->appendContent(
             <p><span style="color: red;">*</span> champs obligatoires</p>
         </form>
     </section>
-
-    <hr class="solid">
 HTML
 );
 
@@ -200,7 +192,7 @@ HTML
 $pageweb->appendContent(
     <<<HTML
     <section class="section has-text-centered">
-        <h2 class="subtitle">Retrouvez-moi sur les <strong>réseaux sociaux</strong> :</h2>
+        <h2 class="subtitle">Vous pouvez me retrouver <strong>ici</strong> :</h2>
 
         <h2 class="subtitle">
             <span class="icon">
