@@ -130,6 +130,12 @@ hr.solid {
 #scroll_to_top a {
     text-decoration: none;
     color: white;
+    transition-duration: .1s;
+}
+
+#scroll_to_top a:hover {
+    transition-duration: .1s;
+    color: darkgrey;
 }
 
 /* Formulaire de contact */

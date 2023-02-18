@@ -96,7 +96,7 @@ $pageweb->appendContent(
         </div>
         <div class="level-item has-text-centered">
             <div>
-                <p class="heading">Objectif</p>
+                <p class="heading">Projet professionnel</p>
                 <p class="subtitle has-text-white-ter">Développeur full-stack</p>
             </div>
         </div>
@@ -167,6 +167,10 @@ $pageweb->appendContent(
                         Maîtrise de <strong>Visual Studio</strong>, <strong>Visual Studio Code</strong> et de la
                         <strong>suite JetBrains</strong>.
                     </p>
+                    
+                    <p>
+                        Niveau en anglais <strong>intermédiaire</strong>.
+                    </p>
                 </div>
 
                 <div class="column">
@@ -183,7 +187,7 @@ $pageweb->appendContent(
                     </ul>
 
                     <p>
-                        Maîtrise de <strong>React</strong>, d'<strong>API Platform</strong> et des frameworks <strong>Symfony</strong> (PHP), <strong>
+                        Maîtrise de <strong>ReactJS</strong>, d'<strong>API Platform</strong> et des frameworks <strong>Symfony</strong> (PHP), <strong>
                         Bulma</strong> et <strong>Bootstrap</strong> (CSS).
                     </p>
                 </div>
@@ -223,10 +227,9 @@ $pageweb->appendContent(
                         </figure>
 
                         <p>
-                            Je me suis inscrit à la salle de sport début <strong>septembre 2022</strong>. Depuis, j'y
-                            suis devenu accro et je m'y rends 5 fois par semaine. La <strong>musculation</strong> m'a
-                            permis d'avoir plus confiance en moi et de faire du sport régulièrement pour me maintenir
-                            en forme.
+                            Je me suis inscrit à la salle de sport début <strong>septembre 2022</strong> et depuis, je 
+                            m'y rends 5 fois par semaine. La <strong>musculation</strong> m'a permis d'avoir plus 
+                            confiance en moi et de faire du sport régulièrement pour me maintenir en forme.
                         </p>
                     </div>
                 </div>

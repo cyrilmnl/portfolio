@@ -96,7 +96,7 @@ $pageweb->appendContent(
         </div>
         <div class="level-item has-text-centered">
             <div>
-                <p class="heading">Objectif</p>
+                <p class="heading">Projet professionnel</p>
                 <p class="subtitle has-text-white-ter">Développeur full-stack</p>
             </div>
         </div>
