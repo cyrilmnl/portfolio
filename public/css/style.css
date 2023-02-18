@@ -154,7 +154,7 @@ hr.solid {
 /* Animation des titres */
 
 #text_ani {
-    animation: ani 1s;
+    animation: ani 2s;
 }
 
 @keyframes ani{
