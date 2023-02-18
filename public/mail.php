@@ -31,7 +31,7 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['mai
                         ]
                     ],
                     'Subject' => "$object",
-                    'TextPart' => "Mail reçu par : $firstname $lastname\n$mail\n\n$message",
+                    'TextPart' => "Mail reçu par : $firstname $lastname\nD'adresse mail : $mail\n\n$message",
                 ]
             ]
         ];
