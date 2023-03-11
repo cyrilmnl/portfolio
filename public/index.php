@@ -271,134 +271,130 @@ $pageweb->appendContent(
         </div>
     </div>
 
-    <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
-        <div class="card-image">
-            <figure class="image is-16by10" id="img1">
-                <img src="img/img2.png" alt="Placeholder image">
-            </figure>
-            <div class="middle">
-                <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl/sae-master-ia'">
-                    <span class="icon">
-                        <i class="fab fa-github"></i>
-                    </span>
-                    <span>GitHub</span>
-                </button>
+    <div class="card-container">
+        <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
+            <div class="card-image">
+                <figure class="image is-16by10" id="img1">
+                    <img src="img/img2.png" alt="Placeholder image">
+                </figure>
+                <div class="middle">
+                    <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl/sae-master-ia'">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>GitHub</span>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content pt-6">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img src="img/profile.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Cyril Manil</p>
+                        <p class="subtitle is-6">En collaboration avec 3 autres étudiants.</p>
+                    </div>
+                </div>
+    
+                <div class="content">
+                    Application web destinée au parcours IA du master informatique de l'URCA, realisée dans le cadre d'une
+                    SAE.
+                    <br><br>
+                    Réalisé avec :
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS (React)</li>
+                        <li>PHP (Symfony et API Platform)</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="card-content pt-6">
-            <div class="media">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img src="img/profile.jpg" alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="media-content">
-                    <p class="title is-4">Cyril Manil</p>
-                    <p class="subtitle is-6">En collaboration avec 3 autres étudiants.</p>
+    
+        <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
+            <div class="card-image">
+                <figure class="image is-16by10" id="img1">
+                    <img src="img/img3.png" alt="Placeholder image">
+                </figure>
+                <div class="middle">
+                    <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl/php-crud-tvshow'">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>GitHub</span>
+                    </button>
                 </div>
             </div>
-
-            <div class="content">
-                Application web destinée au parcours IA du master informatique de l'URCA, realisée dans le cadre d'une
-                SAE.
-                <br><br>
-                Réalisé avec :
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JS</li>
-                    <li>PHP et Symfony</li>
-                    <li>SQL</li>
-                </ul>
-                Publié à
-                <time datetime="2023-2-5">11:13 - 5 février 2023</time>
+            <div class="card-content pt-6">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img src="img/profile.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Cyril Manil</p>
+                        <p class="subtitle is-6">En collaboration avec un autre étudiant.</p>
+                    </div>
+                </div>
+    
+                <div class="content">
+                    Développement d'une application web de consultation et de modification de séries télévisées.
+                    <br><br>
+                    Réalisé avec :
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
-        <div class="card-image">
-            <figure class="image is-16by10" id="img1">
-                <img src="img/img3.png" alt="Placeholder image">
-            </figure>
-            <div class="middle">
-                <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl/php-crud-tvshow'">
-                    <span class="icon">
-                        <i class="fab fa-github"></i>
-                    </span>
-                    <span>GitHub</span>
-                </button>
-            </div>
-        </div>
-        <div class="card-content pt-6">
-            <div class="media">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img src="img/profile.jpg" alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="media-content">
-                    <p class="title is-4">Cyril Manil</p>
-                    <p class="subtitle is-6">En collaboration avec un autre étudiant.</p>
+    
+        <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
+            <div class="card-image">
+                <figure class="image is-16by10" id="img1">
+                    <img src="img/img1.png" alt="Placeholder image">
+                </figure>
+                <div class="middle">
+                    <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl'">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>GitHub</span>
+                    </button>
                 </div>
             </div>
-
-            <div class="content">
-                Développement d'une application web de consultation et de modification de séries télévisées.
-                <br><br>
-                Réalisé avec :
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>PHP</li>
-                    <li>SQL</li>
-                </ul>
-                Publié à
-                <time datetime="2023-2-5">11:23 - 5 février 2023</time>
-            </div>
-        </div>
-    </div>
-
-    <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
-        <div class="card-image">
-            <figure class="image is-16by10" id="img1">
-                <img src="img/img1.png" alt="Placeholder image">
-            </figure>
-            <div class="middle">
-                <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl'">
-                    <span class="icon">
-                        <i class="fab fa-github"></i>
-                    </span>
-                    <span>GitHub</span>
-                </button>
-            </div>
-        </div>
-        <div class="card-content pt-6">
-            <div class="media">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img src="img/profile.jpg" alt="Placeholder image">
-                    </figure>
+            <div class="card-content pt-6">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img src="img/profile.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Cyril Manil</p>
+                        <p class="subtitle is-6">Projet personnel.</p>
+                    </div>
                 </div>
-                <div class="media-content">
-                    <p class="title is-4">Cyril Manil</p>
-                    <p class="subtitle is-6">Projet personnel.</p>
+    
+                <div class="content">
+                    Portfolio réalisé dans le but de présenter mes compétences, mes expériences ainsi que ma formation. Un
+                    système d'envoi de mail avec un formulaire de contact est disponible.
+                    <br><br>
+                    Réalisé avec :
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS et Bulma</li>
+                        <li>JS</li>
+                        <li>PHP</li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="content">
-                Portfolio réalisé dans le but de présenter mes compétences, mes expériences ainsi que ma formation. Un
-                système d'envoi de mail avec un formulaire de contact est disponible.
-                <br><br>
-                Réalisé avec :
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS et Bulma</li>
-                    <li>JS</li>
-                    <li>PHP</li>
-                </ul>
-                Publié à
-                <time datetime="2023-2-5">12:09 - 18 février 2023</time>
             </div>
         </div>
     </div>
