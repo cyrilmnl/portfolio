@@ -362,7 +362,7 @@ $pageweb->appendContent(
                     <img src="img/img1.png" alt="Placeholder image">
                 </figure>
                 <div class="middle">
-                    <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl'">
+                    <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl/portfolio'">
                         <span class="icon">
                             <i class="fab fa-github"></i>
                         </span>
@@ -393,6 +393,48 @@ $pageweb->appendContent(
                         <li>CSS et Bulma</li>
                         <li>JS</li>
                         <li>PHP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card m-6 pt-4 pl-6 pr-6 pb-2">
+            <div class="card-image">
+                <figure class="image is-16by10" id="img1">
+                    <img src="img/img4.png" alt="Placeholder image">
+                </figure>
+                <div class="middle">
+                    <button class="button is-danger" onclick="location.href='https://github.com/cyrilmnl'">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>GitHub</span>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content pt-6">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img src="img/profile.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Cyril Manil</p>
+                        <p class="subtitle is-6">Projet personnel.</p>
+                    </div>
+                </div>
+    
+                <div class="content">
+                    Site web du club de football créé par mes amis et moi même, le Givonne Club Football.
+                    <br><br>
+                    Réalisé avec :
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS et Bulma</li>
+                        <li>JS</li>
+                        <li>PHP (Symfony)</li>
+                        <li>SQL</li>
                     </ul>
                 </div>
             </div>
