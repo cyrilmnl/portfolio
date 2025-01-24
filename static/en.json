@@ -2,31 +2,29 @@
 	"portfolio": {
 		"title": "Portfolio",
 		"description": "This project is my portfolio. It is a static website built with SvelteKit and Tailwind CSS. On this website, you can find information about me, my projects, and my experiences.",
-		"technologies": ["SvelteKit", "Tailwind CSS", "Cloudflare"],
+		"technologies": ["SvelteKit", "Tailwind CSS"],
 		"image": "portfolio.png"
 	},
 	"akcelo": {
 		"title": "akcelo.io",
-		"description": "This project is a rework of the Akcelo's website, an advertising brand of Spacefoot. I was responsible for developing the website's new interface. This rework was done with Svelte and Spectre.css. Finally in 2023, I worked on a new page and I migrated the website to Cloudflare.",
-		"technologies": ["Svelte", "Spectre.css", "Cloudflare"],
+		"description": "This project is a redesign of the Akcelo's website, an advertising brand of Spacefoot. I was responsible for developing the website's new interface. This rework was done with Svelte. Finally in 2023, I worked on a new page and I migrated the website to Cloudflare.",
+		"technologies": ["Svelte"],
 		"image": "akcelo.png"
 	},
 	"amt": {
 		"title": "Ardennes Mega Trail (FAQ)",
-		"description": "This project is a web component for the Ardennes Mega Trail's website. This component is a frequently asked questions section. To build this component, I used Svelte and Tailwind CSS. Supabase was used to store the questions and answers. Finally, I dockerized the component to compile all the required files.",
+		"description": "This project is a web component for the Ardennes Mega Trail's website. This component is a frequently asked questions section and to build it, I used Svelte and Tailwind CSS. Supabase was used to store the questions and answers. Finally, I dockerized the component to compile all the required files.",
 		"technologies": ["Svelte", "Tailwind CSS", "Supabase", "Docker"],
 		"image": "amt-faq.png"
 	},
 	"leads": {
 		"title": "Akcelo Leads",
-		"description": "This project is a web application to manage leads. I was responsible for developing the backend, the frontend and to deploy the application. The backend was built with Django and Django REST Framework to provide a REST API. It uses a PostgreSQL database to store the leads and celery workers to qualify them. The frontend was built with Svelte, Tailwind CSS and Flowbite. To deploy the application, I used Docker locally and Ansible on the server.",
+		"description": "This project is a web application to manage leads. I was responsible for developing the backend, the frontend and to deploy the application. The backend was built with Django and Django REST Framework to provide a REST API. It uses a PostgreSQL database to store the leads and workers to qualify them. The frontend was built with Svelte and Flowbite. To deploy the application, I used Docker locally and Ansible on the server.",
 		"technologies": [
 			"Django",
 			"Django REST Framework",
 			"PostgreSQL",
-			"Celery",
 			"Svelte",
-			"Tailwind CSS",
 			"Flowbite",
 			"Docker",
 			"Ansible"
@@ -35,29 +33,29 @@
 	},
 	"footeo": {
 		"title": "Footeo/Clubeo",
-		"description": "Footeo/Clubeo is a Content Management System (CMS) for sports clubs that allows them to create and manage their website. I was responsible for developing new features, fixing bugs and working on the website's interface redesign. The application is built with Symfony, jQuery and AngularJS.",
-		"technologies": ["Symfony", "jQuery", "AngularJS"],
+		"description": "Footeo/Clubeo is a Content Management System (CMS) for sports clubs that allows them to create and manage their website. I was responsible for developing new features, fixing bugs and working on the website's interface redesign. The application is built with Symfony",
+		"technologies": ["Symfony", "MySQL"],
 		"image": "footeo.png"
 	},
 	"spotify": {
 		"title": "Spotify stats",
-		"description": "This project is a frontend web application to display Spotify statistics. It uses the Spotify Web API to get the user's data. I built this web application with React, Material-UI and Emotion.",
+		"description": "This personal project is a frontend web application to display Spotify statistics. It uses the Spotify Web API to get the user's data. I built this web application with React, Material-UI and Emotion.",
 		"technologies": ["React", "Material-UI", "Emotion"]
 	},
 	"slmads": {
 		"title": "Akcelo internal tools",
-		"description": "I'm currently working on internal tools for Akcelo since 2023. The first tool is a web application to manage the company's ads. It is built with Django Admin and I was responsible for developing new features and fixing bugs. The second tool is a frontend web application which allows the diffusion and the placement of ads on our partner's websites. It is built with TypeScript, Vue and Prebid.js. I was responsible for developing some modules, testing and fixing bugs.",
-		"technologies": ["Django", "TypeScript", "Vue", "Prebid.js", "Mocha", "Chai"]
+		"description": "I'm currently working on internal tools for Akcelo since 2023. The first tool is a web application to manage the company's ads. It is built with Django Admin and I was responsible for developing new features and fixing bugs. The second tool is a frontend web application which allows the diffusion and the placement of ads on our partner's websites. It is built with TypeScript, Vue.js and Prebid.js. I was responsible for developing some modules, testing and fixing bugs.",
+		"technologies": ["Django", "TypeScript", "Vue.js", "Prebid.js", "Vitest"]
 	},
 	"sportslocalmedia": {
 		"title": "Sports Local Media",
 		"description": "This project is a static website for Sports Local Media. It is built with SvelteKit and Tailwind CSS. The website is a showcase of the company's services. I used Cloudflare to deploy the website on Cloudflare Pages and to manage emails with Cloudflare Workers and SendGrid.",
-		"technologies": ["SvelteKit", "Tailwind CSS", "Cloudflare", "SendGrid"],
+		"technologies": ["SvelteKit", "Tailwind CSS"],
 		"image": "slm.png"
 	},
 	"masteria": {
 		"title": "Master's degree in computer science web app",
-		"description": "This project was a school project for my university's master's degree in computer science. It is a web application to manage the master's degree. We built this application with Symfony, Twig and Bootstrap. It was just a CRUD application to manage students, teachers, courses, etc and it wasn't deployed.",
+		"description": "This project was a school project for my university's master's degree in computer science. It is a web application to manage the master's degree. We built this application with Symfony, Twig and Bootstrap. It was a simple CRUD application to manage students, teachers, courses, etc.",
 		"technologies": ["Symfony", "Twig", "Bootstrap"],
 		"image": "masteria.png"
 	}
