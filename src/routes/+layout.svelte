@@ -1,8 +1,9 @@
 <script lang="ts">
 	import '../app.css';
 	import HoverGlow from '../components/HoverGlow.svelte';
-	import { GithubIcon, LinkedinIcon } from 'svelte-feather-icons';
+	import { FileIcon, GithubIcon, LinkedinIcon } from 'svelte-feather-icons';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	let { children } = $props();
 
@@ -39,7 +40,7 @@
 <svelte:window bind:innerWidth={screenSize} />
 
 <div
-	class="body overflow-hidden bg-gray-900"
+	class="body min-h-screen overflow-hidden bg-gray-900"
 	onmousemove={mousemove}
 	onmouseleave={mouseleave}
 	aria-hidden="true"
@@ -51,7 +52,7 @@
 				<h1 class="text-center text-5xl font-bold text-white md:text-start">Cyril Manil</h1>
 				<p class="mt-4 text-center text-xl text-gray-300 md:text-start">Fullstack Developer</p>
 				<p class="mt-4 text-center text-lg text-gray-400 md:text-start">
-					I specialize in building intuitive and high-performance web applications.
+					I specialize in building web applications with a focus on performance and user experience.
 				</p>
 				<div class="mt-8 flex justify-center gap-4 md:justify-start">
 					<a
@@ -67,6 +68,13 @@
 						class="inline-block text-lg font-semibold text-primary-200 transition duration-200 hover:text-primary-500"
 					>
 						<LinkedinIcon class="h-6 w-6" />
+					</a>
+					<a
+						href="/files/cv.pdf"
+						download="Cyril Manil - CV.pdf"
+						class="inline-block text-lg font-semibold text-primary-200 transition duration-200 hover:text-primary-500"
+					>
+						<FileIcon class="h-6 w-6" />
 					</a>
 				</div>
 				<div class="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
@@ -89,7 +97,7 @@
 						Projects
 					</a>
 				</div>
-				{#if screenSize > 768}
+				{#if screenSize > 768 && $page.url.pathname === '/'}
 					<div class="mt-8 flex flex-col items-center">
 						<img
 							src="/assets/cube.avif"
@@ -105,11 +113,6 @@
 							src="/assets/cube.avif"
 							alt="Cube 3"
 							class="max-h-32 max-w-32 rotate-[120deg] self-end grayscale duration-300 hover:scale-105 hover:grayscale-0"
-						/>
-						<img
-							src="/assets/cube.avif"
-							alt="Cube 4"
-							class="mt-8 max-h-[22rem] max-w-[22rem] rotate-[150deg] grayscale duration-300 hover:scale-105 hover:grayscale-0"
 						/>
 					</div>
 				{/if}
