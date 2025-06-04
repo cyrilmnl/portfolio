@@ -33,7 +33,7 @@
 	},
 	"footeo": {
 		"title": "Footeo/Clubeo",
-		"description": "Footeo/Clubeo is a Content Management System (CMS) for sports clubs that allows them to create and manage their website. I was responsible for developing new features, fixing bugs and working on the website's interface redesign. The application is built with Symfony",
+		"description": "Footeo/Clubeo is a Content Management System (CMS) for sports clubs that allows them to create and manage their website. I was responsible for developing new features, fixing bugs and working on the website's interface redesign. The application is built with Symfony.",
 		"technologies": ["Symfony", "MySQL"],
 		"image": "footeo.png"
 	},
