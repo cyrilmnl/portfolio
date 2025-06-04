@@ -20,3 +20,7 @@ npm run build
 npm run format
 npm run lint
 ```
+
+### TODO
+
+- [ ] Add more projects (cssa-actu, php-crud-tvshow)

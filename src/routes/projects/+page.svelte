@@ -83,7 +83,7 @@
 					</td>
 					<td class="whitespace-nowrap px-6 py-4">
 						<a
-							href="https://cyril-manil.fr"
+							href="https://www.cyril-manil.fr"
 							class="flex items-center text-primary-500 hover:text-primary-700"
 							target="_blank"
 						>
