@@ -50,7 +50,9 @@
 		<div class="flex flex-wrap">
 			<div class="w-full px-8 py-24 md:w-2/5">
 				<h1 class="text-center text-5xl font-bold text-white md:text-start">Cyril Manil</h1>
-				<p class="mt-4 text-center text-xl text-gray-300 md:text-start">Fullstack Developer</p>
+				<p class="mt-4 text-center text-xl text-gray-300 md:text-start">
+					Fullstack Developer & Traffic Manager
+				</p>
 				<p class="mt-4 text-center text-lg text-gray-400 md:text-start">
 					I specialize in building web applications with a focus on performance and user experience.
 				</p>

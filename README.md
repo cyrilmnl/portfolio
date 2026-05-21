@@ -23,5 +23,4 @@ npm run lint
 
 ### TODO
 
-- [ ] Add more projects (cssa-actu)
 - [ ] Add i18n

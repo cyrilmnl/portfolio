@@ -73,6 +73,26 @@
 			</thead>
 			<tbody class="divide-y divide-gray-200">
 				<tr>
+					<td class="whitespace-nowrap px-6 py-4">2026</td>
+					<td class="whitespace-nowrap px-6 py-4">VALLEE Industries</td>
+					<td class="whitespace-nowrap px-6 py-4">
+						<button
+							class="text-primary-500 hover:text-primary-700"
+							onclick={() => openModal('vallee')}>Details</button
+						>
+					</td>
+					<td class="whitespace-nowrap px-6 py-4">
+						<a
+							href="https://vallee-industries.com/"
+							class="flex items-center text-primary-500 hover:text-primary-700"
+							target="_blank"
+						>
+							vallee-industries.com
+							<ArrowUpRightIcon class="h-6 w-6 text-primary-200" />
+						</a>
+					</td>
+				</tr>
+				<tr>
 					<td class="whitespace-nowrap px-6 py-4">2025</td>
 					<td class="whitespace-nowrap px-6 py-4">Portfolio</td>
 					<td class="whitespace-nowrap px-6 py-4">

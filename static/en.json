@@ -58,5 +58,11 @@
 		"description": "This project was a school project for my university's master's degree in computer science. It is a web application to manage the master's degree. We built this application with Symfony, Twig and Bootstrap. It was a simple CRUD application to manage students, teachers, courses, etc.",
 		"technologies": ["Symfony", "Twig", "Bootstrap"],
 		"image": "masteria.png"
+	},
+	"vallee": {
+		"title": "VALLEE Industries",
+		"description": "Website for VALLEE Industries, a company based in Charleville-Mézières, dedicated to selling second-hand machine tools. The site was built with Astro, Svelte and Supabase. I self-host it using Cloudflare and OVH, and implemented an email sending service.",
+		"technologies": ["Astro", "Svelte", "Supabase"],
+		"image": "vallee-industries.png"
 	}
 }

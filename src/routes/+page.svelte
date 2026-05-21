@@ -24,10 +24,39 @@
 			I’m always eager to tackle new challenges, expand my expertise, and collaborate with teams to
 			craft solutions that drive results and innovation.
 		</p>
+		<p class="mt-4 text-lg text-gray-400">
+			As a Traffic Manager since 2026, I plan, launch, monitor and optimize advertising campaigns to
+			improve delivery quality and performance, while ensuring accurate setup, pacing, reporting and
+			coordination between technical and business teams. I also hold a DV360 certification,
+			available on my LinkedIn profile.
+		</p>
 	</div>
 	<div id="experience">
 		<h2 class="mt-16 text-3xl font-bold text-white">Experience</h2>
 		<div class="mt-8 grid grid-cols-1 gap-2">
+			<a
+				href="https://www.sportslocalmedia.fr/"
+				target="_blank"
+				class="rounded-lg p-6 transition duration-200 hover:bg-gray-800 hover:shadow-lg"
+			>
+				<div class="flex items-center justify-between">
+					<h3 class="text-xl font-semibold text-primary-200">Traffic Manager</h3>
+					<ArrowUpRightIcon class="h-6 w-6 text-primary-200" />
+				</div>
+				<p class="mt-2 text-lg text-gray-400">Sports Local Media (2026 - Present)</p>
+				<p class="mt-2 text-lg text-gray-400">
+					I manage campaign optimization and ad operations trafficking/monitoring on Google Ad
+					Manager and Display & Video 360.
+				</p>
+				<div class="mt-2 flex flex-wrap gap-2">
+					<p class="rounded-full bg-primary-800 bg-opacity-15 px-4 py-2 text-primary-500">
+						Google Ad Manager
+					</p>
+					<p class="rounded-full bg-primary-800 bg-opacity-15 px-4 py-2 text-primary-500">
+						Display & Video 360
+					</p>
+				</div>
+			</a>
 			<a
 				href="http://www.akcelo.io/"
 				target="_blank"
