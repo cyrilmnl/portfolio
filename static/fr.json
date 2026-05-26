@@ -1,0 +1,68 @@
+{
+	"portfolio": {
+		"title": "Portfolio",
+		"description": "Ce projet est mon portfolio. C'est un site statique réalisé avec SvelteKit et Tailwind CSS. Vous y trouverez des informations sur moi, mes projets et mes expériences.",
+		"technologies": ["SvelteKit", "Tailwind CSS"],
+		"image": "portfolio.png"
+	},
+	"akcelo": {
+		"title": "akcelo.io",
+		"description": "Ce projet est une refonte du site d'Akcelo, marque publicitaire de Spacefoot. J'ai été responsable du développement de la nouvelle interface. Cette refonte a été réalisée avec Svelte. En 2023, j'ai également travaillé sur une nouvelle page et migré le site vers Cloudflare.",
+		"technologies": ["Svelte"],
+		"image": "akcelo.png"
+	},
+	"amt": {
+		"title": "Ardennes Mega Trail (FAQ)",
+		"description": "Ce projet est un composant web pour le site de l'Ardennes Mega Trail. Ce composant correspond à la section questions fréquentes. Pour le construire, j'ai utilisé Svelte et Tailwind CSS. Supabase a servi à stocker les questions et réponses. Enfin, j'ai dockerisé le composant pour compiler les fichiers nécessaires.",
+		"technologies": ["Svelte", "Tailwind CSS", "Supabase", "Docker"],
+		"image": "amt-faq.png"
+	},
+	"leads": {
+		"title": "Akcelo Leads",
+		"description": "Ce projet est une application web de gestion de leads. J'ai pris en charge le backend, le frontend et le déploiement. Le backend a été réalisé avec Django et Django REST Framework pour fournir une API REST. L'application utilise PostgreSQL pour stocker les leads et des workers pour les qualifier. Le frontend a été développé avec Svelte et Flowbite. Pour le déploiement, j'ai utilisé Docker en local et Ansible sur le serveur.",
+		"technologies": [
+			"Django",
+			"Django REST Framework",
+			"PostgreSQL",
+			"Svelte",
+			"Flowbite",
+			"Docker",
+			"Ansible"
+		],
+		"image": "leads.png"
+	},
+	"footeo": {
+		"title": "Footeo/Clubeo",
+		"description": "Footeo/Clubeo est un CMS pour les clubs sportifs qui leur permet de créer et gérer leur site web. J'ai été responsable du développement de nouvelles fonctionnalités, de la correction de bugs et de la refonte de l'interface. L'application est construite avec Symfony.",
+		"technologies": ["Symfony", "MySQL"],
+		"image": "footeo.png"
+	},
+	"spotify": {
+		"title": "Spotify stats",
+		"description": "Ce projet personnel est une application frontend qui affiche des statistiques Spotify. Elle utilise l'API Spotify Web pour récupérer les données utilisateur. J'ai développé cette application avec React, Material-UI et Emotion.",
+		"technologies": ["React", "Material-UI", "Emotion"]
+	},
+	"slmads": {
+		"title": "Outils internes Akcelo",
+		"description": "Je travaille sur des outils internes pour Akcelo depuis 2023. Le premier outil est une application web de gestion des publicités, construite avec Django Admin, sur laquelle j'ai développé des fonctionnalités et corrigé des bugs. Le second est une application frontend qui permet la diffusion et le placement des publicités sur les sites partenaires. Elle est construite avec TypeScript, Vue.js et Prebid.js. J'ai développé certains modules, testé et corrigé des bugs.",
+		"technologies": ["Django", "TypeScript", "Vue.js", "Prebid.js", "Vitest"]
+	},
+	"sportslocalmedia": {
+		"title": "Sports Local Media",
+		"description": "Ce projet est un site vitrine pour Sports Local Media. Il est construit avec SvelteKit et Tailwind CSS. Le site présente les services de l'entreprise. J'ai utilisé Cloudflare pour déployer le site sur Cloudflare Pages et gérer les emails avec Cloudflare Workers et SendGrid.",
+		"technologies": ["SvelteKit", "Tailwind CSS"],
+		"image": "slm.png"
+	},
+	"masteria": {
+		"title": "Application web de master en informatique",
+		"description": "Ce projet était un projet universitaire pour le master informatique. C'est une application web de gestion du master. Nous l'avons développée avec Symfony, Twig et Bootstrap. C'était une application CRUD pour gérer les étudiants, enseignants, cours, etc.",
+		"technologies": ["Symfony", "Twig", "Bootstrap"],
+		"image": "masteria.png"
+	},
+	"vallee": {
+		"title": "VALLEE Industries",
+		"description": "Site web pour VALLEE Industries, entreprise basée à Charleville-Mézières, spécialisée dans la vente de machines-outils d'occasion. Le site a été développé avec Astro, Svelte et Supabase. J'assure l'hébergement moi-même avec Cloudflare et OVH, et j'ai implémenté un service d'envoi d'emails.",
+		"technologies": ["Astro", "Svelte", "Supabase"],
+		"image": "vallee-industries.png"
+	}
+}

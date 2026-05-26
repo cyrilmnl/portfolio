@@ -20,7 +20,3 @@ npm run build
 npm run format
 npm run lint
 ```
-
-### TODO
-
-- [ ] Add i18n

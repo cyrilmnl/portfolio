@@ -2,6 +2,7 @@
 	import '../app.css';
 	import HoverGlow from '../components/HoverGlow.svelte';
 	import { FileIcon, GithubIcon, LinkedinIcon } from 'svelte-feather-icons';
+	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
@@ -10,6 +11,32 @@
 	let m = $state<{ x: number; y: number } | null>(null);
 	let showButton = $state(false);
 	let screenSize = $state(0);
+	type Lang = 'en' | 'fr';
+	let currentLang = $derived<Lang>($page.url.pathname.split('/')[1] === 'en' ? 'en' : 'fr');
+	let localeRoot = $derived(`/${currentLang}`);
+
+	const i18n = {
+		en: {
+			subtitle: 'Fullstack Developer & Traffic Manager',
+			intro:
+				'I specialize in building web applications with a focus on performance and user experience.',
+			about: 'About me',
+			experience: 'Experience',
+			projects: 'Projects',
+			rights: 'All rights reserved. Built with',
+			top: '↑ Top'
+		},
+		fr: {
+			subtitle: 'Développeur Fullstack & Traffic Manager',
+			intro:
+				"Je suis spécialisé dans le développement d'applications web avec un focus sur la performance et l'expérience utilisateur.",
+			about: 'À propos',
+			experience: 'Expérience',
+			projects: 'Projets',
+			rights: 'Tous droits réservés. Conçu avec',
+			top: '↑ Haut'
+		}
+	};
 
 	function mousemove(event: MouseEvent) {
 		const target = event.currentTarget as HTMLElement;
@@ -27,6 +54,19 @@
 
 	function handleScroll() {
 		showButton = window.scrollY > 150;
+	}
+
+	function switchLanguage(event: Event) {
+		const target = event.currentTarget as HTMLSelectElement;
+		const nextLang = target.value as Lang;
+		const parts = $page.url.pathname.split('/').filter(Boolean);
+		if (parts[0] === 'fr' || parts[0] === 'en') {
+			parts[0] = nextLang;
+		} else {
+			parts.unshift(nextLang);
+		}
+		const nextPath = `/${parts.join('/')}${$page.url.search}${$page.url.hash}`;
+		void goto(nextPath);
 	}
 
 	onMount(() => {
@@ -51,10 +91,10 @@
 			<div class="w-full px-8 py-24 md:w-2/5">
 				<h1 class="text-center text-5xl font-bold text-white md:text-start">Cyril Manil</h1>
 				<p class="mt-4 text-center text-xl text-gray-300 md:text-start">
-					Fullstack Developer & Traffic Manager
+					{i18n[currentLang].subtitle}
 				</p>
 				<p class="mt-4 text-center text-lg text-gray-400 md:text-start">
-					I specialize in building web applications with a focus on performance and user experience.
+					{i18n[currentLang].intro}
 				</p>
 				<div class="mt-8 flex justify-center gap-4 md:justify-start">
 					<a
@@ -81,25 +121,25 @@
 				</div>
 				<div class="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
 					<a
-						href="/#about"
+						href={`${localeRoot}/#about`}
 						class="inline-block rounded-full bg-primary-800 bg-opacity-25 px-6 py-3 text-lg font-semibold text-primary-200 transition duration-200 hover:bg-opacity-50"
 					>
-						About me
+						{i18n[currentLang].about}
 					</a>
 					<a
-						href="/#experience"
+						href={`${localeRoot}/#experience`}
 						class="inline-block rounded-full bg-primary-800 bg-opacity-25 px-6 py-3 text-lg font-semibold text-primary-200 transition duration-200 hover:bg-opacity-50"
 					>
-						Experience
+						{i18n[currentLang].experience}
 					</a>
 					<a
-						href="/#projects"
+						href={`${localeRoot}/#projects`}
 						class="inline-block rounded-full bg-primary-800 bg-opacity-25 px-6 py-3 text-lg font-semibold text-primary-200 transition duration-200 hover:bg-opacity-50"
 					>
-						Projects
+						{i18n[currentLang].projects}
 					</a>
 				</div>
-				{#if screenSize > 768 && $page.url.pathname === '/'}
+				{#if screenSize > 768 && $page.url.pathname === localeRoot}
 					<div class="mt-8 flex flex-col items-center">
 						<img
 							src="/assets/cube.avif"
@@ -122,9 +162,20 @@
 			{@render children()}
 		</div>
 	</div>
+	<div class="absolute right-4 top-4 z-20">
+		<select
+			class="rounded-md border border-primary-500 bg-gray-900 px-3 py-2 text-sm text-primary-200"
+			value={currentLang}
+			onchange={switchLanguage}
+			aria-label="Language selector"
+		>
+			<option value="en">EN</option>
+			<option value="fr">FR</option>
+		</select>
+	</div>
 	<div class="absolute bottom-0 left-0 right-0 flex justify-center p-4 text-center text-gray-400">
 		<p>
-			© {new Date().getFullYear()} Cyril Manil - All rights reserved. Built with
+			© {new Date().getFullYear()} Cyril Manil - {i18n[currentLang].rights}
 			<a href="https://svelte.dev/" class="text-primary-200 hover:underline" target="_blank"
 				>Svelte</a
 			>
@@ -139,7 +190,7 @@
 			class="fixed bottom-4 right-4 rounded-full bg-primary-800 bg-opacity-25 px-6 py-3 text-lg font-semibold text-primary-200 transition duration-200 hover:bg-opacity-50"
 			onclick={scrollToTop}
 		>
-			↑ Top
+			{i18n[currentLang].top}
 		</button>
 	{/if}
 </div>

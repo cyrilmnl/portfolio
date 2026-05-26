@@ -1,16 +1,48 @@
 <script lang="ts">
 	import { ArrowUpRightIcon } from 'svelte-feather-icons';
-	import Modal from '../../components/Modal.svelte';
+	import Modal from '../../../components/Modal.svelte';
+	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import type { ModalContent, ModalData } from '$lib/types/Modal';
 
-	let showModal = false;
-	let modalContent: ModalContent = { title: '', description: '', technologies: [], image: null };
-	let modalData: ModalData = {};
+	let currentLang = $derived<'en' | 'fr'>($page.url.pathname.split('/')[1] === 'en' ? 'en' : 'fr');
 
-	onMount(async () => {
-		const response = await fetch('/en.json');
+	let showModal = $state(false);
+	let modalContent = $state<ModalContent>({
+		title: '',
+		description: '',
+		technologies: [],
+		image: null
+	});
+	let modalData = $state<ModalData>({});
+	const i18n = {
+		en: {
+			back: '← Back to home',
+			year: 'Year',
+			project: 'Project',
+			details: 'Details',
+			link: 'Link'
+		},
+		fr: {
+			back: "← Retour à l'accueil",
+			year: 'Année',
+			project: 'Projet',
+			details: 'Détails',
+			link: 'Lien'
+		}
+	};
+
+	async function loadModalData(locale: 'en' | 'fr') {
+		const response = await fetch(`/${locale}.json`);
 		modalData = await response.json();
+	}
+
+	onMount(() => {
+		void loadModalData(currentLang);
+	});
+
+	$effect(() => {
+		void loadModalData(currentLang);
 	});
 
 	function openModal(contentKey: string) {
@@ -48,26 +80,26 @@
 
 <div class="w-full px-8 pb-24 md:w-3/5 md:py-24">
 	<a
-		href="/"
+		href={`/${currentLang}`}
 		class="rounded-full bg-primary-800 bg-opacity-25 px-6 py-3 text-lg font-semibold text-primary-200 transition duration-200 hover:bg-opacity-50"
 	>
-		← Back to home
+		{i18n[currentLang].back}
 	</a>
 	<div class="mt-8 overflow-x-auto">
 		<table class="min-w-full divide-y divide-gray-200 text-gray-400">
 			<thead>
 				<tr>
 					<th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-						>Year</th
+						>{i18n[currentLang].year}</th
 					>
 					<th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-						>Project</th
+						>{i18n[currentLang].project}</th
 					>
 					<th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-						>Details</th
+						>{i18n[currentLang].details}</th
 					>
 					<th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
-						>Link</th
+						>{i18n[currentLang].link}</th
 					>
 				</tr>
 			</thead>
@@ -78,7 +110,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('vallee')}>Details</button
+							onclick={() => openModal('vallee')}>{i18n[currentLang].details}</button
 						>
 					</td>
 					<td class="whitespace-nowrap px-6 py-4">
@@ -98,7 +130,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('portfolio')}>Details</button
+							onclick={() => openModal('portfolio')}>{i18n[currentLang].details}</button
 						>
 					</td>
 					<td class="whitespace-nowrap px-6 py-4">
@@ -118,7 +150,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('akcelo')}>Details</button
+							onclick={() => openModal('akcelo')}>{i18n[currentLang].details}</button
 						>
 					</td>
 					<td class="whitespace-nowrap px-6 py-4">
@@ -137,7 +169,7 @@
 					<td class="whitespace-nowrap px-6 py-4">Ardennes Mega Trail (FAQ)</td>
 					<td class="whitespace-nowrap px-6 py-4">
 						<button class="text-primary-500 hover:text-primary-700" onclick={() => openModal('amt')}
-							>Details</button
+							>{i18n[currentLang].details}</button
 						>
 					</td>
 					<td class="whitespace-nowrap px-6 py-4">
@@ -157,7 +189,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('leads')}>Details</button
+							onclick={() => openModal('leads')}>{i18n[currentLang].details}</button
 						>
 					</td>
 				</tr>
@@ -167,7 +199,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('footeo')}>Details</button
+							onclick={() => openModal('footeo')}>{i18n[currentLang].details}</button
 						>
 					</td>
 					<td class="whitespace-nowrap px-6 py-4">
@@ -187,7 +219,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('spotify')}>Details</button
+							onclick={() => openModal('spotify')}>{i18n[currentLang].details}</button
 						>
 					</td>
 				</tr>
@@ -197,7 +229,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('slmads')}>Details</button
+							onclick={() => openModal('slmads')}>{i18n[currentLang].details}</button
 						>
 					</td>
 				</tr>
@@ -207,7 +239,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('sportslocalmedia')}>Details</button
+							onclick={() => openModal('sportslocalmedia')}>{i18n[currentLang].details}</button
 						>
 					</td>
 					<td class="whitespace-nowrap px-6 py-4">
@@ -227,7 +259,7 @@
 					<td class="whitespace-nowrap px-6 py-4">
 						<button
 							class="text-primary-500 hover:text-primary-700"
-							onclick={() => openModal('masteria')}>Details</button
+							onclick={() => openModal('masteria')}>{i18n[currentLang].details}</button
 						>
 					</td>
 				</tr>
